@@ -1,0 +1,50 @@
+<%- include('partials/header'); -%>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" type="text/css" href="/asserts/css/organ_style.css" />
+	<title>Organ</title>
+</head>
+
+<body>
+	<% var test = 0; %>
+
+	<div class="container organ">
+		<div class="row">
+
+			<% organ.forEach(function(organ){ %>
+			<% test++ %>
+			<div class="col-md-4">
+				<div class="card text-center" style="width: 20rem">
+					<div class="card-header" style="background-color: rgba(54, 14, 14, 0.5); color: white">
+						Hospital Name: <%= organ.hospname %>
+					</div>
+					<div class="card-body">
+						<h5 class="card-title">Details :</h5>
+						<ul class="list-group list-group-flush">
+							<li class="list-group-item">Date: <%= organ.date %></li>
+							<li class="list-group-item">Age: <%= organ.age %></li>
+
+							<li class="list-group-item">Contact: <%= organ.hospcontact %></li>
+							<li class="list-group-item">Address: <%= organ.hospaddress %></li>
+							<li class="list-group-item">Remarks: <%= organ.remarks %></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<% }); %>
+
+
+
+		</div>
+	</div>
+	<% if(test == 0) { %>
+	<h4 style="text-align: center;color: red">We dont have this organ as of now</h4>
+	<h5 style="text-align: center;color: green">Try again later</h5>
+	<% } %>
+</body>
+
+</html>
