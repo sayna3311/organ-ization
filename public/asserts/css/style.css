@@ -562,6 +562,9 @@ menu_text {
   text-transform: uppercase;
 }
 
+.read_bt_text {
+  color: #ffffff;
+}
 
 .read_bt:hover {
   color: #ffffff;
