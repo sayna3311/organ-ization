@@ -237,8 +237,6 @@ button {
   position: relative;
 }
 
-.menu_main {
-}
 
 .menu_main ul {
   margin: 0px;
@@ -555,21 +553,17 @@ menu_text {
   width: 150px;
   float: left;
   margin-top: 30px;
-}
-
-.read_bt a {
-  width: 100%;
-  float: left;
   font-size: 16px;
   color: #ffffff;
-  background-color: #3674f2;
+  background-color: #6e18f8;
   text-align: center;
   padding: 10px 0px;
   border-radius: 40px;
   text-transform: uppercase;
 }
 
-.read_bt a:hover {
+
+.read_bt:hover {
   color: #ffffff;
   background-color: #a258ed;
 }
@@ -772,6 +766,7 @@ menu_text {
   text-align: center;
   padding-top: 10px;
   display: flex;
+  color: white;
   top: 20px;
   position: relative;
 }

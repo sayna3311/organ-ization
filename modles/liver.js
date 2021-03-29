@@ -1,5 +1,5 @@
 var mongoose = require("mongoose");
-var liver = new mongoose.Schema({
+var liverSchema = new mongoose.Schema({
   hosp: String,
   hospname: String,
   hospaddress: String,
@@ -8,4 +8,4 @@ var liver = new mongoose.Schema({
   age: String,
   remarks: String
 });
-module.exports = mongoose.model("liver", liver);
+module.exports = mongoose.model("liver", liverSchema);

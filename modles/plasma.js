@@ -1,5 +1,5 @@
 var mongoose = require("mongoose");
-var plasma = new mongoose.Schema({
+var plasmaSchema = new mongoose.Schema({
   hosp: String,
   hospname: String,
   hospaddress: String,
@@ -9,4 +9,4 @@ var plasma = new mongoose.Schema({
   remarks: String
   // points: int
 });
-module.exports = mongoose.model("plasma", plasma);
+module.exports = mongoose.model("plasma", plasmaSchema);

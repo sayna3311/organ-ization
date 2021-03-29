@@ -1,5 +1,5 @@
 var mongoose = require("mongoose");
-var heart = new mongoose.Schema({
+var heartSchema = new mongoose.Schema({
   hosp: String,
   hospname: String,
   hospaddress: String,
@@ -9,4 +9,4 @@ var heart = new mongoose.Schema({
   remarks: String
   // points: int
 });
-module.exports = mongoose.model("heart", heart);
+module.exports = mongoose.model("heart", heartSchema);

@@ -12,20 +12,22 @@ const dotenv = require("dotenv");
 const connectDB = require("./config/db");
 
 //Modles to be included
-var hospital = require("./modles/hospital"),
-  heart = require("./modles/heart"),
-  intestine = require("./modles/intestine"),
-  kidney = require("./modles/kidney"),
-  liver = require("./modles/liver"),
-  lungs = require("./modles/lungs"),
-  pancreas = require("./modles/pancreas"),
-  plasma = require("./modles/plasma");
+var hospital = require("./modles/hospital");
+var heart = require("./modles/heart");
+var intestine = require("./modles/intestine");
+var kidney = require("./modles/kidney");
+var liver = require("./modles/liver");
+var lungs = require("./modles/lungs");
+var pancreas = require("./modles/pancreas");
+var plasma = require("./modles/plasma");
 
 //Modles ends
 app.use("/", express.static("public"));
 
 //PORT ADDRESS
-var port = 5000;
+var port = process.env.PORT || 5000;
+
+dotenv.config();
 
 connectDB();
 //Altus Data cluster connection query ends
@@ -285,6 +287,7 @@ app.post("/organ", function(req, res) {
         res.render("organ", {
           organ: allliver
         });
+        console.log(allliver);
       }
     });
   }
